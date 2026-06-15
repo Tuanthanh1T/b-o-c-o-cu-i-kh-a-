@@ -1,133 +1,520 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Báo chi tiết</title>
-    <!-- thêm bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="./access/css/bai bao/bai bao.css">
-    
+    <title>NEWS24 - Trang Tin Tức</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="./access/css/trang_chu.css">
+
 </head>
 <body>
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+
     <div class="container">
-        <!-- tao header -->
-        <div class="header">
-            <div class="logo">
-                <a href="../trang_chu.html"><img width="48" height="48" src="https://img.icons8.com/doodle/48/news.png" alt="news"/></a>
-            </div>
 
-            <div class="search">
-                <button type="button" class="tim_kiem">
-                    <img width="28" height="28" src="https://img.icons8.com/fluency-systems-regular/48/search--v1.png" alt="search--v1"/>
-                    <input id="searchInput" class="input_tim_kiem" type="text" placeholder="Tìm kiếm...">
-                </button>
-            </div>
+        <a class="navbar-brand fw-bold fs-3" href="./index.html" >
+            TIN NÓNG
+        </a>
 
-            <div class="user">
-                <button class="nguoi_dung">
-                    <a href="../trang_dang_ki_dang_nhap.html">
-                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/name.png" alt="name"/>
+        <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="./index.html">
+                        Trang chủ
                     </a>
-                </button>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./the_thao.html">
+                        Thể thao
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./cong_nghe.html">
+                        Công nghệ
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./giai_tri.html">
+                        Giải trí
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="d-flex">
+
+                <a href="./dang_nhap.html" class="btn btn-outline-light">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+        </div>
+    </div>
+</nav>
+
+<!-- BANNER -->
+<section class="container mt-4">
+    <div id="heroCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+        
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+        </div>
+
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <div class="row align-items-center p-5 hero-slide">
+                    <div class="col-lg-6 text-white text-start slide-content">
+                        <span class="badge bg-danger mb-3 px-3 py-2 fs-6">🔥 Tin nổi bật</span>
+                        <h1 class="fw-bold mb-3">Trí tuệ nhân tạo thay đổi thế giới như thế nào?</h1>
+                        <p class="fs-5 text-light mb-4">AI đang phát triển mạnh mẽ và tạo ra những bước tiến lớn trong nhiều lĩnh vực công nghệ.</p>
+                        <a href="./html/a1.html" class="btn btn-primary btn-lg">Đọc ngay</a>
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <img src="./access/img/ai.webp" 
+                             class="d-block w-100 rounded-3 slide-img" 
+                             alt="Banner 1" 
+                             onerror="this.src='https://placehold.co/600x400/444/FFF?text=Hinh+Anh+10'">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row align-items-center p-5 hero-slide">
+                    <div class="col-lg-6 text-white text-start slide-content">
+                        <span class="badge bg-success mb-3 px-3 py-2 fs-6">💻 Công nghệ</span>
+                        <h1 class="fw-bold mb-3">Khám phá vũ trụ và những điều bí ẩn mới</h1>
+                        <p class="fs-5 text-light mb-4">Các nhà khoa học vừa phát hiện thêm một hành tinh mới có tiềm năng chứa sự sống.</p>
+                        <a href="./html/a2.html" class="btn btn-primary btn-lg">Đọc ngay</a>
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <img src="./access/img/hanh tinh.webp" 
+                             class="d-block w-100 rounded-3 slide-img" 
+                             alt="Banner 2"
+                             onerror="this.src='https://placehold.co/600x400/444/FFF?text=Hinh+Anh+2'">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row align-items-center p-5 hero-slide">
+                    <div class="col-lg-6 text-white text-start slide-content">
+                        <span class="badge bg-warning text-dark mb-3 px-3 py-2 fs-6">⭐ Thể thao</span>
+                        <h1 class="fw-bold mb-3">Chung kết kịch tính giải bóng đá toàn cầu</h1>
+                        <p class="fs-5 text-light mb-4">Trận đấu khép lại với những cảm xúc vỡ òa từ hàng triệu người hâm mộ trên khắp thế giới.</p>
+                        <a href="./html/a3.html" class="btn btn-primary btn-lg">Đọc ngay</a   >
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <img src="./access/img/psg_win.webp" 
+                             class="d-block w-100 rounded-3 slide-img" 
+                             alt="Banner 3"
+                             onerror="this.src='https://placehold.co/600x400/444/FFF?text=Hinh+Anh+3'">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row align-items-center p-5 hero-slide">
+                    <div class="col-lg-6 text-white text-start slide-content">
+                        <span class="badge bg-warning text-blue mb-3 px-3 py-2 fs-6"> Kinh tế</span>
+                        <h1 class="fw-bold mb-3">Chung kết kịch tính giải bóng đá toàn cầu</h1>
+                        <p class="fs-5 text-light mb-4">Trận đấu khép lại với những cảm xúc vỡ òa từ hàng triệu người hâm mộ trên khắp thế giới.</p>
+                        <a href="./html/a3.html" class="btn btn-primary btn-lg">Đọc ngay</a   >
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <img src="./access/img/psg_win.webp" 
+                             class="d-block w-100 rounded-3 slide-img" 
+                             alt="Banner 3"
+                             onerror="this.src='https://placehold.co/600x400/444/FFF?text=Hinh+Anh+3'">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <div class="row align-items-center p-5 hero-slide">
+                    <div class="col-lg-6 text-white text-start slide-content">
+                        <span class="badge bg-warning text-dark mb-3 px-3 py-2 fs-6">⭐ Thể thao</span>
+                        <h1 class="fw-bold mb-3">Chung kết kịch tính giải bóng đá toàn cầu</h1>
+                        <p class="fs-5 text-light mb-4">Trận đấu khép lại với những cảm xúc vỡ òa từ hàng triệu người hâm mộ trên khắp thế giới.</p>
+                        <a href="./html/a3.html" class="btn btn-primary btn-lg">Đọc ngay</a   >
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <img src="./access/img/psg_win.webp" 
+                             class="d-block w-100 rounded-3 slide-img" 
+                             alt="Banner 3"
+                             onerror="this.src='https://placehold.co/600x400/444/FFF?text=Hinh+Anh+3'">
+                    </div>
+                </div>
             </div>
         </div>
-    
-        <!-- Phần Navbar -->
-        <div class="navbar">
-            <div class="nav-item">
-                <a href="./trang_chu.html">
-                    <img src="https://img.icons8.com/material-rounded/24/home.png"/>
-                    <h10>Trang Chủ</h10>
-                </a>
-            </div>
 
-            <div class="nav-item">
-                <a href="./trang_gioi_thieu.html">
-                    <img src="https://img.icons8.com/fluency-systems-filled/48/blog.png"/>
-                    <h10>Giới thiệu</h10>
-                </a>
-            </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Trước</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Sau</span>
+        </button>
+    </div>
+</section>
 
-            <div class="nav-item">
-                <a href="./tinnong.html">
-                    <img src="https://img.icons8.com/ios-glyphs/30/fire-element--v1.png"/>
-                    <h10>Tin Nóng</h10>
-                </a>
-            </div>
+<!-- DANH MỤC -->
+
+<section class="container mt-4">
+    <div class="d-flex gap-3 flex-wrap">
+        <a class="btn btn-outline-primary" href="./index.html">
+            Tất cả
+        </a>
+
+        <a class="btn btn-outline-primary" href="./the_thao.html">
+            Thể thao
+        </a>
+
+        <a class="btn btn-outline-primary" href="./cong_nghe.html">
+            Công nghệ
+        </a>
+
+        <a class="btn btn-outline-primary" href="./giai_tri.html">
+            Giải trí
+        </a>
+
+        <a class="btn btn-outline-primary" href="./kinh_te.html">
+            Kinh tế
+        </a>
     </div>
 
+    <div class="col-lg-4">
+            <div class="card p-3 mb-4">
+                <h4>
+                    🔥 Tin nổi bật
+                </h4>
+
+                <ul>
+
+                    <li>AI thay đổi thế giới năm 2026</li>
+                    <li>Việt Nam thắng 2-1</li>
+                    <li>iPhone mới ra mắt</li>
+                    <li>Giá vàng tăng mạnh</li>
+
+                </ul>
+            </div>
+
+            <div class="card p-3">
+                <h4>
+                    📧 Đăng ký nhận tin
+                </h4>
+
+                <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Nhập email"
+                >
+
+                <button class="btn btn-primary mt-3">
+                    Đăng ký
+                </button>
+
+            </div>
         </div>
-            <!-- Phần main -->
-                <!-- Phần sidebar -->
-                <!-- pham container -->
-                <div class="content">
-                    <div>
-                        <h1>Những bí ẩn xung quanh Lãnh tụ tối cao mới của Iran</h1>
-                        <p>TPO - Iran đã lựa chọn ông Mojtaba Khamenei - con trai của Đại giáo chủ Ali Khamenei quá cố, trở thành Lãnh tụ tối cao kế nhiệm. Nhà lãnh đạo mới là người khá bí ẩn ngay cả trong nội bộ Iran.</p>
-                        <img src="../access/img/ap26063304147652.jpg" alt="">
-                        <p>Ông Mojtaba Khamenei được nói là một người có ảnh hưởng lớn sau hậu trường, điều phối các hoạt động quân sự và tình báo tại văn phòng của cha mình. Ông có mối quan hệ rất thân thiết với Lực lượng Vệ binh Cách mạng Hồi giáo hùng mạnh và được coi là ứng cử viên được họ ưu ái.
 
-Trước khi được lựa chọn, vị giáo sĩ 56 tuổi được biết đến nhiều với vai trò giảng dạy tại các trường dòng Shi’ite nổi tiếng.
+</section>
 
-Tuy nhiên, tính cách hay quan điểm chính trị của ông bên ngoài hàng ngũ thân cận của cha mình vẫn là điều còn bí ẩn, vì ông hiếm khi phát biểu hay xuất hiện trước công chúng. Giờ đây, ông sẽ nắm quyền không chỉ với tư cách người đứng đầu tôn giáo và chính trị mới của Iran, mà còn là tổng tư lệnh các lực lượng vũ trang của đất nước.
+<!-- NỘI DUNG -->
 
-Ông Vali R. Nasr, một chuyên gia về Iran và Hồi giáo Shi’ite tại Đại học Johns Hopkins (Mỹ), cho rằng việc lựa chọn ông Mojtaba Khamenei là điều bất ngờ, nhưng rất có ý nghĩa.
+<section class="container mt-4">
+    <div class="row">
+        <!-- TIN TỨC -->
+        <div class="col-lg-12">
+            <h3 class="mb-4">
+                📰 Tin mới nhất
+            </h3>
+            <div class="row g-4">
 
-“Việc lựa chọn ông Mojtaba là sự tiếp nối truyền thống, và ông ấy cũng sẵn sàng hơn các ứng cử viên khác để nhanh chóng củng cố quyền lực và khẳng định quyền kiểm soát hệ thống”, ông Nasr nhận định. Theo chuyên gia này, ông Mojtaba Khamenei đã được xem xét là người kế nhiệm từ lâu; nhưng ông dường như đã biến mất khỏi chú ý trong 2 năm qua.
-
-Một số quan chức cấp cao Iran hiểu tình hình nội bộ cho biết, cố Đại giáo chủ Ali Khamenei đã nói với các cố vấn thân cận, rằng ông không muốn con trai mình kế vị vì không muốn vai trò này trở thành cha truyền con nối. Cuộc cách mạng Hồi giáo năm 1979 đã lật đổ chế độ quân chủ với lời hứa chấm dứt truyền thống cha truyền con nối và trả lại quyền lực cho nhân dân.Tuy nhiên, việc đưa ông Mojtaba Khamenei lên nắm quyền cho thấy những người trong giới quyền lực ở Iran, bao gồm các giáo sĩ cấp cao, Lực lượng Vệ binh Cách mạng và các chính trị gia có ảnh hưởng, đã đoàn kết lại trong thời điểm khủng hoảng và chiến tranh khốc liệt.
-
-Ông Ali Larijani - người đứng đầu Hội đồng An ninh quốc gia, là một chính trị gia kỳ cựu thực dụng, đang đóng vai trò trung tâm trong việc điều hành đất nước. Ông và ông Mojtaba Khamenei là đồng minh và bạn bè lâu năm. Cả hai đều có ảnh hưởng trong lực lượng vũ trang Iran.
-
-Lực lượng Vệ binh Cách mạng mang sứ mệnh bảo vệ nền cộng hòa Hồi giáo và biên giới của đất nước. Lực lượng này đã trở thành một thế lực chính trị, quân sự và kinh tế hùng mạnh, hiện phụ trách các cuộc tấn công bằng tên lửa đạn đạo và máy bay không người lái nhằm vào Israel, các quốc gia Ả-rập ở vùng Vịnh Ba Tư, các căn cứ cũng như đại sứ quán của Mỹ trong khu vực.
-
-Ông Mojtaba Khamenei được lựa chọn bởi Hội đồng chuyên gia gồm 88 giáo sĩ Hồi giáo Shi’ite cấp cao. Trong khi hội đồng đang tranh luận về sự lựa chọn của họ, Israel đã tấn công tòa nhà ở Qum, một trong những trung tâm quyền lực chính của Hồi giáo Shi’ite, nơi hội đồng thường họp để bỏ phiếu bầu lãnh đạo mới. Nhưng theo hãng thông tấn Fars, tòa nhà đó trống rỗng khi bị tấn công vì các giáo sĩ họp trực tuyến.
-
-Trong các cuộc thảo luận, đa số giáo sĩ cấp cao trong hội đồng ủng hộ việc bổ nhiệm ông Mojtaba Khamenei, tin rằng ông có đủ năng lực cần thiết để lãnh đạo Iran vào thời điểm này. Một số giáo sĩ cho rằng sau khi ông Ali Khamenei bị Mỹ và Israel ám sát, việc chọn con trai ông sẽ tôn vinh di sản của ông.
-
-Lựa chọn khôn ngoan
-
-“Ông Mojtaba là sự lựa chọn khôn ngoan nhất hiện nay vì ông ấy rất quen thuộc với việc điều hành và phối hợp các bộ máy an ninh và quân sự. Ông ấy đã phụ trách việc này rồi”, ông Mehdi Rahmati, một nhà phân tích ở Tehran, nói với New York Times.
-
-Tuy nhiên, ông Rahmati cũng cho rằng lựa chọn này có thể tăng thêm sự chia rẽ trong dư luận, khi có một bộ phận người dân phản đối sự cai trị nghiêm khắc.
-
-Cố lãnh đạo Ali Khamenei có tiếng nói cuối cùng trong tất cả vấn đề chính của nhà nước. Ông thể hiện ít linh hoạt trong cải cách và rất ít nhượng bộ trong đàm phán hạt nhân với Mỹ.
-
-Một số nhà phân tích cho rằng ông Mojtaba Khamenei vẫn có thể nghiêng về phía cải cách, vì ông thuộc thế hệ giáo sĩ trẻ hơn, thực dụng hơn và sẽ ít gặp phải sự phản kháng từ các phe phái cứng rắn và bảo thủ.
-
-Ông Abdolreza Davari, một chính trị gia thân cận với ông Khamenei, nói với New York Times rằng Mojtaba Khamenei có thể sẽ theo phong cách của Thái tử kế vị Ả-rập Xê-út Mohammed bin Salman, người đã cho phép một số quyền tự do trong xã hội khi đảm nhận quyền lãnh đạo thực tế.
-
-“Nếu có ai đó có thể nghiêng về hướng giảm leo thang với Mỹ, đó sẽ là ông ấy (Mojtaba Khamenei). Bất kỳ người nào khác sẽ phải đối mặt với sự phản đối từ tầng lớp cầm quyền và những người bảo thủ”, ông Davari nhận định.
-
-Tại Washington, Tổng thống Donald Trump cho biết nhiều người mà Mỹ coi là những nhà lãnh đạo tiềm năng của Iran đã thiệt mạng kể từ khi cuộc chiến bắt đầu. “Chẳng mấy chốc chúng ta sẽ không biết ai là ai cả”, ông nói.
-
-Khi được hỏi về kịch bản xấu nhất ở Iran, ông Trump nói: “Tôi đoán trường hợp xấu nhất sẽ là chúng tôi làm điều này và người lên nắm quyền cũng tệ như người trước. Đúng vậy, điều đó có thể xảy ra. Chúng tôi không muốn điều đó xảy ra”.</p>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card news-card">
+                        <img
+                            src="./access/img/new1.avif"
+                            class="card-img-top"
+                        >
+                        <div class="card-body">
+                            <h5>
+                                Kinh tế Việt Nam tăng trưởng mạnh
+                            </h5>
+                            <p>
+                                Các chỉ số kinh tế ghi nhận
+                                tín hiệu tích cực.
+                            </p>
+                        </div>
                     </div>
-
                 </div>
 
-        <!-- Phần Footer -->
-       <div class="footer">
-            <div class="footer_col">
-                <h4>Giới thiệu</h4>
-                <p>Website tin tức cập nhật nhanh và chính xác.</p>
-            </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card news-card">
+                        <img
+                            src="./access/img/new2.jpg"
+                            class="card-img-top"
+                        >
+                        <div class="card-body">
+                            <h5>
+                                Galaxy mới ra mắt
+                            </h5>
+                            <p>
+                                Nhiều tính năng AI
+                                được tích hợp.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="footer_col">
-                <h4>Liên kết</h4>
-                <a href="./trang_chu.html">Trang chủ</a>
-                <a href="./trang_dang_tin.html">Đăng tin</a>
-                <a href="./trang_gioi_thieu.html">Giới thiệu</a>
-            </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card news-card">
+                        <img
+                            src="./access/img/new3.webp"
+                            class="card-img-top"
+                        >
+                        <div class="card-body">
+                            <h5>
+                                Xu hướng công nghệ 2026
+                            </h5>
+                            <p>
+                                Những thay đổi lớn trong
+                                ngành công nghệ.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="footer_col">
-                <h4>Liên hệ</h4>
-                <p>Email: tq0902713194@gmail.com</p>
-                <p>Hotline: 0903184810</p>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card news-card">
+                        <img
+                            src="./access/img/psg_win.webp"
+                            class="card-img-top"
+                        >
+                        <div class="card-body">
+                            <h5>
+                                lộ diện nhà vô địch mới
+                            </h5>
+                            <p>
+                                nhà vô địch mới của giải bóng đá toàn cầu đã được xác định sau trận chung kết kịch tính.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card news-card">
+                        <img
+                            src="./access/img/mat_tich.avif"
+                            class="card-img-top"
+                        >
+                        <div class="card-body">
+                            <h5>
+                                Đà Nẵng khẩn trương tìm kiếm du khách nước ngoài 
+                            </h5>
+                            <p>
+                                Đà Nẵng đang tiến hành tìm kiếm du khách nước ngoài nghi mất tích trên biển.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card news-card">
+                        <img
+                            src="./access/img/hanoi.jpg"
+                            class="card-img-top"
+                        >
+                        <div class="card-body">
+                            <h5>
+                                Hà Nội chính thức thí điểm vùng phát thải thấp trên 11 tuyến phố từ 1/7
+                            </h5>
+                            <p>
+                                Hà Nội sẽ thí điểm vùng phát thải thấp trên 11 tuyến phố từ ngày 1/7 nhằm giảm ùn tắc và ô nhiễm.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card news-card">
+                        <img
+                            src="./access/img/nghiquyet.jpg"
+                            class="card-img-top"
+                        >
+                        <div class="card-body">
+                            <h5>
+                                Nghị quyết số 10-NQ/TW: Nâng chuẩn FDI để nâng tầm nền kinh tế
+                            </h5>
+                            <p>
+                                Nghị quyết số 10-NQ/TW đặt mục tiêu nâng chuẩn FDI để nâng tầm nền kinh tế Việt Nam, thu hút đầu tư chất lượng cao và bền vững.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card news-card">
+                        <img
+                            src="./access/img/mỹ.jpg"
+                            class="card-img-top"
+                        >
+                        <div class="card-body">
+                            <h5>
+                                Mỹ và Iran 'trống đánh xuôi kèn thổi ngược' về thỏa thuận hòa bình
+                            </h5>
+                            <p>
+                                Mỹ và Iran đang có những phát ngôn trái ngược về thỏa thuận hòa bình, tạo ra sự mơ hồ về triển vọng đàm phán trong tương lai.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card news-card">
+                        <img
+                            src="./access/img/quydinh.jpg"
+                            class="card-img-top"
+                        >
+                        <div class="card-body">
+                            <h5>
+                                Quy định mới về quản lý chi phí đầu tư xây dựng
+                            </h5>
+                            <p>
+                                Bộ Xây dựng vừa ban hành Thông tư 03/2024/TT-BXD quy định về quản lý chi phí đầu tư xây dựng, nhằm tăng cường kiểm soát và minh bạch trong lĩnh vực này.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card news-card">
+                        <img
+                            src="./access/img/toipham.jpg"
+                            class="card-img-top"
+                        >
+                        <div class="card-body">
+                            <h5>
+                                Ngăn chặn hiệu quả tội phạm trong lĩnh vực kinh tế
+                            </h5>
+                            <p>
+                                ngăn chặn hiệu quả tội phạm trong lĩnh vực kinh tế đòi hỏi sự phối hợp chặt chẽ giữa các cơ quan chức năng, tăng cường giám sát và áp dụng các biện pháp phòng ngừa nhằm bảo vệ lợi ích của người dân và doanh nghiệp.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card news-card">
+                        <img
+                            src="./access/img/thaodo.jpg"
+                            class="card-img-top"
+                        >
+                        <div class="card-body">
+                            <h5>
+                                Tháo dỡ khu phức hợp sau 8 năm bị phát hiện xây dựng không phép
+                            </h5>
+                            <p>
+                                tháo dỡ khu phức hợp sau 8 năm bị phát hiện xây dựng không phép tại Hà Nội, đánh dấu một bước tiến quan trọng trong việc thực thi pháp luật và quản lý đô thị.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card news-card">
+                        <img
+                            src="./access/img/dien.jpg"
+                            class="card-img-top"
+                        >
+                        <div class="card-body">
+                            <h5>
+                                Công ty Điện lực Lào Cai gặp mặt các cơ quan báo chí nhân Ngày Báo chí cách mạng Việt Nam (21/6)
+                            </h5>
+                            <p>
+                                Công ty Điện lực Lào Cai đã tổ chức buổi gặp mặt với các cơ quan báo chí nhân dịp Ngày Báo chí cách mạng Việt Nam (21/6), nhằm tăng cường mối quan hệ hợp tác và truyền thông hiệu quả giữa công ty và giới truyền thông.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="bg-dark text-white mt-5">
+
+    <div class="container py-5">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <h3>NEWS24</h3>
+
+                <p>
+                    Trang tin tức tổng hợp
+                    nhanh và chính xác.
+                </p>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h4>Danh mục</h4>
+
+                <p><a href="./index.html" class="text-white text-decoration-none">Tin mới</a></p>
+                <p><a href="./the_thao.html" class="text-white text-decoration-none">Thể thao</a></p>
+                <p><a href="./cong_nghe.html" class="text-white text-decoration-none">Công nghệ</a></p>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h4>Liên hệ</h4>
+
+                <p>tq0902713194@gmail.com</p>
+
+                <p>0903184810</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="./access/js/trang_chu.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+```
+
 </body>
 </html>
