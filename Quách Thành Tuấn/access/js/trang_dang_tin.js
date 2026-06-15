@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // ===== CHUYỂN VỀ TRANG CHỦ SAU 1 GIÂY =====
         setTimeout(function () {
-            window.location.replace("trang_chu.html");
+            window.location.replace("index.html");
         }, 1000);
 
     });

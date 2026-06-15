@@ -13,25 +13,18 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
 
     // Lấy danh sách tài khoản đã lưu
     let users = JSON.parse(localStorage.getItem("users")) || [];
+    // Kiểm tra thông tin đăng nhập
+    let user = users.find(u => u.username === username && u.password === password);
 
-    // Kiểm tra trùng tên đăng nhập
-    let existed = users.find(user => user.username === username);
-
-    if (existed) {
-        alert("Tên đăng nhập đã tồn tại!");
+    if (!user) {
+        alert("Tên đăng nhập hoặc mật khẩu không đúng!");
         return;
     }
-
-    // Lưu tài khoản
-    users.push({
-        username: username,
-        password: password,
-    });
 
     localStorage.setItem("users", JSON.stringify(users));
 
     alert("Đăng nhập thành công!");
 
-    window.location.href = "trang_chu.html";
+    window.location.href = "index.html";
 });
 

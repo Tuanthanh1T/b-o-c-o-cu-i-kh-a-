@@ -41,6 +41,6 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
 
     alert("Đăng ký thành công!");
 
-    window.location.href = "trang_chu.html";
+    window.location.href = "index.html";
 });
 
