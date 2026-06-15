@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Tin</title>
+    <!-- them bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./access/css/trang_dang_tin.css">
+    
+</head>
+<body>
+    <div class="container-form">
+    <h2>Đăng Tin Tức</h2>
+
+    <form id="formDangTin" class="dang_tin">
+
+        <div class="input-group">
+            <label>Tiêu đề</label>
+            <input type="text" id="tieu_de" required>
+        </div>
+
+        <div class="input-group">
+            <label>Nội dung</label>
+            <textarea id="noidung" rows="5" required></textarea>
+        </div>
+
+        <div class="input-group">
+            <label>Hình ảnh (URL)</label>
+            <input type="text" id="anh">
+        </div>
+
+        <button type="submit" class="btn-submit">Đăng Tin</button>
+
+        <p id="thongBao" style="display:none;">Đăng tin thành công!</p>
+
+    </form>
+</div>
+    <script src="./access/js/trang_dang_tin.js"></script>
+</body>
+</html>

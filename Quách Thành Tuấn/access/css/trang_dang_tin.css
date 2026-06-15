@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+/* Card */
+.container-form{
+    width:480px;
+    background:#ffffff;
+    padding:40px;
+    border-radius:18px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+}
+
+/* Tiêu đề */
+h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:26px;
+    font-weight:700;
+    color:#0f172a;
+}
+
+/* Form */
+.dang_tin{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+/* Nhóm input */
+.input-group{
+    display:flex;
+    flex-direction:column;
+}
+
+/* Label */
+.input-group label{
+    font-weight:600;
+    margin-bottom:8px;
+    font-size:14px;
+    color:#334155;
+}
+
+/* Input & textarea */
+.input-group input,
+.input-group textarea{
+    padding:14px;
+    border-radius:12px;
+    border:1px solid #e2e8f0;
+    font-size:14px;
+    transition:0.3s ease;
+    background:#f8fafc;
+}
+
+/* Focus */
+.input-group input:focus,
+.input-group textarea:focus{
+    border-color:#6366f1;
+    box-shadow:0 0 0 3px rgba(99,102,241,0.2);
+    outline:none;
+    background:#ffffff;
+}
+
+/* Textarea */
+textarea{
+    resize:none;
+}
+
+/* Button */
+.btn-submit{
+    padding:14px;
+    border:none;
+    border-radius:14px;
+    background:#6366f1;
+    color:white;
+    font-weight:600;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.btn-submit:hover{
+    background:#4f46e5;
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Thông báo */
+#thongBao{
+    text-align:center;
+    color:#16a34a;
+    font-weight:bold;
+    margin-top:10px;
+}
